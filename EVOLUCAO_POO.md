@@ -79,7 +79,7 @@ POO não reduz automaticamente complexidade ciclomática. Um método grande e re
 
 ## Ponte para Python
 
-Python oferece `list` como coleção dinâmica de uso geral; sua representação não é uma lista encadeada. C++ oferece diferentes contêineres, como `std::vector` e `std::list`, com características distintas. A lista encadeada manual em C torna visíveis nós, endereços e liberação de memória; as aulas seguintes poderão comparar esse custo com abstrações gerenciadas.
+Python oferece `list` como coleção dinâmica de uso geral; sua representação não é uma lista encadeada. C++ oferece diferentes contêineres, como `std::vector` e `std::list`, com características distintas. A lista encadeada manual em C torna visíveis nós, endereços e liberação de memória, enquanto essas abstrações oferecem gerenciamento automático dos recursos internos.
 
 ## Evidências para comparar antes e depois
 
