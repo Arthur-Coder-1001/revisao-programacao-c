@@ -18,7 +18,7 @@ git switch -c pratica/01-fundamentos
 
 ## Escopo permitido
 
-Implemente somente `src/monitor.c`. Não altere o contrato em `include/monitor.h`, os testes, o `Makefile` ou o workflow para contornar uma falha.
+Implemente somente `src/monitor.c`. Preserve as assinaturas e os comportamentos esperados descritos em `include/monitor.h`, nas instruções e nos testes. Não altere esses arquivos, o `Makefile` ou o workflow para contornar uma falha.
 
 ## Antes do push
 

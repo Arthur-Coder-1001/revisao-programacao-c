@@ -4,6 +4,8 @@ Repositório-base das atividades cumulativas de algoritmos e programação proce
 
 [![Validação da prática](https://github.com/rafaelrezo/revisao-programacao-c/actions/workflows/validacao.yml/badge.svg)](https://github.com/rafaelrezo/revisao-programacao-c/actions/workflows/validacao.yml)
 
+Neste repositório, **contrato de uma função** significa o acordo sobre o que ela recebe, o que faz, o que devolve e quais entradas ou erros precisa rejeitar. O cabeçalho, as instruções e os testes descrevem esse comportamento esperado.
+
 ## Requisitos
 
 - Git configurado para acessar o GitHub;

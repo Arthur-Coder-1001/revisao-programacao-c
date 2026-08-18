@@ -37,7 +37,7 @@ if (carregar_leituras(caminho, &historico)) {
 lista_liberar(&historico);
 ```
 
-As decisões internas de abertura, leitura, validação e encadeamento ficam atrás de funções com contratos nomeados. C permite essa boa decomposição, embora uma `struct` pública ainda possa ser alterada diretamente.
+As decisões internas de abertura, leitura, validação e encadeamento ficam atrás de funções com entradas, resultados e erros definidos. C permite essa boa decomposição, embora uma `struct` pública ainda possa ser alterada diretamente.
 
 ## Direção da refatoração em C++
 
@@ -72,7 +72,7 @@ O ganho esperado vem de decisões de projeto combinadas:
 - `Sensor` protege sua coleção e seus invariantes;
 - o contêiner gerencia memória sem chamadas manuais a `malloc` e `free`;
 - o repositório concentra detalhes de arquivo;
-- cada componente possui um contrato menor e testes mais focados;
+- cada componente possui um comportamento esperado menor e testes mais focados;
 - o fluxo principal coordena objetos, sem repetir regras internas.
 
 POO não reduz automaticamente complexidade ciclomática. Um método grande e repleto de condições continua complexo. A melhora ocorre quando as responsabilidades e decisões são decompostas de maneira coesa.
