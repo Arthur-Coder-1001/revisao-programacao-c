@@ -3,7 +3,7 @@ CFLAGS := -std=c17 -Wall -Wextra -Werror -pedantic -Iinclude
 LDLIBS := -lm
 BUILD_DIR := build
 
-.PHONY: all build run test clean
+.PHONY: all build run demo test clean
 
 all: build
 
@@ -15,6 +15,18 @@ $(BUILD_DIR)/monitor: src/main.c src/monitor.c include/monitor.h
 
 run: build
 	./$(BUILD_DIR)/monitor
+
+demo: build
+	@if [ "$(ETAPA)" = "03" ]; then \
+		$(CC) $(CFLAGS) src/demo_lista.c src/monitor.c $(LDLIBS) -o $(BUILD_DIR)/demo_03; \
+		./$(BUILD_DIR)/demo_03; \
+	elif [ "$(ETAPA)" = "04" ]; then \
+		$(CC) $(CFLAGS) src/demo_arquivo.c src/monitor.c $(LDLIBS) -o $(BUILD_DIR)/demo_04; \
+		./$(BUILD_DIR)/demo_04; \
+	else \
+		echo "Informe a etapa: make demo ETAPA=03 ou ETAPA=04"; \
+		exit 2; \
+	fi
 
 test: build
 	@if [ -z "$(ETAPA)" ]; then \

@@ -27,7 +27,16 @@ Neste repositório, **contrato de uma função** significa o acordo sobre o que 
 | 1. Tipos, expressões e decisões | `pratica/01-fundamentos` | `make test ETAPA=01` |
 | 2. Vetores e funções | `pratica/02-vetores-funcoes` | `make test ETAPA=02` |
 | 3. `struct` e ponteiros | `pratica/03-struct-ponteiros` | `make test ETAPA=03` |
-| 4. Listas e arquivos | `pratica/04-arquivos` | `make test ETAPA=04` |
+| 4. Arquivos | `pratica/04-arquivos` | `make test ETAPA=04` |
+
+Depois de concluir as implementações, observe o comportamento das estruturas com:
+
+```bash
+make demo ETAPA=03
+make demo ETAPA=04
+```
+
+O primeiro comando mostra inserção, percurso, média e liberação da lista. O segundo cria um arquivo, recupera seus valores e mostra as leituras reconstruídas.
 
 As especificações, os checkpoints e as saídas esperadas estão no material da disciplina. Não altere `.github/`, `tests/`, `include/monitor.h` nem o `Makefile` para contornar uma validação.
 
@@ -50,6 +59,8 @@ O código inicial compila, mas as funções contêm pontos de implementação. O
 ├── include/monitor.h
 ├── src/main.c
 ├── src/monitor.c
+├── src/demo_lista.c
+├── src/demo_arquivo.c
 ├── tests/
 ├── CONTRIBUTING.md
 ├── EVOLUCAO_POO.md

@@ -2,7 +2,13 @@
 
 ## Finalidade
 
-O repositório sustenta uma revisão prática de C em até 100 minutos. A sequência usa três branches cumulativas e GitHub Actions como feedback formativo.
+O repositório sustenta uma revisão prática de C em três aulas de 100 minutos. A sequência usa quatro branches cumulativas, atividades de casa entre os encontros e GitHub Actions como feedback formativo. O prazo final recomendado é a semana seguinte à terceira aula.
+
+| Aula | Escopo | Ponto de parada |
+|---|---|---|
+| 1 | etapas 01 e 02: dados, decisões, vetores e funções | estatísticas validadas |
+| 2 | etapa 03: ponteiros, lista e memória dinâmica | lista demonstrada e liberada |
+| 3 | etapa 04: arquivos, acesso ao estado e consolidação | persistência validada e revisão respondida |
 
 | Etapa | Branch | Competências verificadas |
 |---|---|---|
@@ -19,7 +25,7 @@ Os testes são cumulativos: cada etapa repete todas as anteriores. Isso detecta 
 2. Faça um fork de teste com uma conta secundária, se disponível.
 3. Confirme que um push em cada nome de branch inicia o workflow correto.
 4. Mantenha a solução de referência fora deste repositório público.
-5. Disponibilize o material conceitual com os contratos e a agenda de 100 minutos.
+5. Disponibilize o material conceitual com os comportamentos esperados, a agenda das três aulas e as atividades de casa.
 
 ## Limites da validação
 
