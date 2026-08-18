@@ -2,13 +2,33 @@
 
 ## Finalidade
 
-O repositório sustenta uma revisão prática de C em três aulas de 100 minutos. A sequência usa quatro branches cumulativas, atividades de casa entre os encontros e GitHub Actions como feedback formativo. O prazo final recomendado é a semana seguinte à terceira aula.
+O repositório sustenta uma revisão prática de C em duas aulas presenciais de 100 minutos e uma terceira parte realizada em casa. A sequência usa quatro branches cumulativas e GitHub Actions como feedback formativo. O prazo final recomendado é a semana seguinte à segunda aula. Uma terceira aula pode ser reservada como contingência, revisão ou validação final, sem planejar uma quarta aula.
 
-| Aula | Escopo | Ponto de parada |
+| Parte | Realização | Escopo | Ponto de parada |
+|---|---|---|---|
+| 1 | aula 1 | etapas 01 e 02: dados, decisões, vetores e funções | estatísticas encaminhadas ou validadas |
+| 2 | aula 2 | etapa 03: ponteiros, lista e memória dinâmica | lista desenhada, demonstrada e encaminhada |
+| 3 | casa | etapa 04: arquivos, acesso ao estado e consolidação | persistência validada e revisão entregue |
+
+## Organização das duplas
+
+- cada estudante mantém o próprio fork e envia a própria evidência;
+- a dupla alterna os papéis de digitação e acompanhamento;
+- ao final de cada parte, os integrantes revisam diff, resultado e CI um do outro;
+- a revisão conjunta não substitui a capacidade individual de explicar o código;
+- quando houver uso de IA, cada estudante registra o que aceitou, rejeitou e compreendeu.
+
+## Evidências no Google Classroom
+
+Crie três atividades separadas:
+
+| Atividade | Evidência principal | Reflexão individual |
 |---|---|---|
-| 1 | etapas 01 e 02: dados, decisões, vetores e funções | estatísticas validadas |
-| 2 | etapa 03: ponteiros, lista e memória dinâmica | lista demonstrada e liberada |
-| 3 | etapa 04: arquivos, acesso ao estado e consolidação | persistência validada e revisão respondida |
+| 1 — dados e controle | fork, CI da etapa 02 e commit | divisão por zero na média |
+| 2 — ponteiros e lista | CI da etapa 03, commit e desenho | necessidade de `NoLeitura **` |
+| 3 — arquivos e consolidação | CI da etapa 04, commit, demonstração e arquivo | lista temporária e contribuição da revisão em dupla |
+
+O Classroom funciona como coleta de evidência e comunicação. O fork, os commits e a CI permanecem como fonte do código executável.
 
 | Etapa | Branch | Competências verificadas |
 |---|---|---|
@@ -25,7 +45,19 @@ Os testes são cumulativos: cada etapa repete todas as anteriores. Isso detecta 
 2. Faça um fork de teste com uma conta secundária, se disponível.
 3. Confirme que um push em cada nome de branch inicia o workflow correto.
 4. Mantenha a solução de referência fora deste repositório público.
-5. Disponibilize o material conceitual com os comportamentos esperados, a agenda das três aulas e as atividades de casa.
+5. Disponibilize o material conceitual com os comportamentos esperados, a agenda das duas aulas e a parte 3 como atividade de casa.
+
+## Critério para usar a terceira aula
+
+Reserve a terceira aula somente se, no prazo intermediário, ocorrer uma destas condições:
+
+- menos de 70% dos forks possuem a etapa 03 validada;
+- uma falha conceitual sobre `NoLeitura **` aparece de forma recorrente;
+- a maioria não consegue explicar o ciclo `malloc` → uso → `free`;
+- a etapa 04 apresenta bloqueio coletivo que não pode ser resolvido por feedback escrito;
+- a validação oral exige tempo adicional.
+
+Caso contrário, mantenha a parte 3 como trabalho de casa e prossiga com o curso, evitando reservar preventivamente uma quarta aula.
 
 ## Limites da validação
 
