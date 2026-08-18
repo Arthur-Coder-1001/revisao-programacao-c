@@ -20,13 +20,13 @@ O repositório sustenta uma revisão prática de C em duas aulas presenciais de 
 
 ## Evidências no Google Classroom
 
-Crie três atividades separadas:
+Crie três desafios separados:
 
-| Atividade | Evidência principal | Reflexão individual |
+| Desafio | Evidência principal | Reflexão individual |
 |---|---|---|
-| 1 — dados e controle | fork, CI da etapa 02 e commit | divisão por zero na média |
-| 2 — ponteiros e lista | CI da etapa 03, commit e desenho | necessidade de `NoLeitura **` |
-| 3 — arquivos e consolidação | CI da etapa 04, commit, demonstração e arquivo | lista temporária e contribuição da revisão em dupla |
+| A — dados e controle | fork, CI da etapa 02 e commit | divisão por zero na média |
+| B — ponteiros e lista | CI da etapa 03, commit e desenho | necessidade de `NoLeitura **` |
+| C — arquivos e consolidação | CI da etapa 04, commit, demonstração e arquivo | lista temporária e contribuição da revisão em dupla |
 
 O Classroom funciona como coleta de evidência e comunicação. O fork, os commits e a CI permanecem como fonte do código executável.
 
