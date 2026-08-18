@@ -1,0 +1,61 @@
+name: Validação da prática
+
+on:
+  push:
+    branches:
+      - "pratica/**"
+  workflow_dispatch:
+    inputs:
+      etapa:
+        description: Etapa que deve ser validada
+        required: true
+        type: choice
+        options:
+          - "01"
+          - "02"
+          - "03"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: validacao-${{ github.repository }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validar:
+    name: Validar ${{ github.ref_name }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Obter o código
+        uses: actions/checkout@v4
+
+      - name: Selecionar a etapa pela branch
+        id: etapa
+        shell: bash
+        env:
+          EVENTO: ${{ github.event_name }}
+          ETAPA_MANUAL: ${{ inputs.etapa }}
+        run: |
+          if [[ "${EVENTO}" == "workflow_dispatch" ]]; then
+            echo "numero=${ETAPA_MANUAL}" >> "${GITHUB_OUTPUT}"
+            exit 0
+          fi
+
+          case "${GITHUB_REF_NAME}" in
+            pratica/01-fundamentos) echo "numero=01" >> "${GITHUB_OUTPUT}" ;;
+            pratica/02-vetores-funcoes) echo "numero=02" >> "${GITHUB_OUTPUT}" ;;
+            pratica/03-struct-ponteiros) echo "numero=03" >> "${GITHUB_OUTPUT}" ;;
+            *)
+              echo "::error title=Nome de branch inválido::Use uma das branches indicadas no README."
+              exit 1
+              ;;
+          esac
+
+      - name: Compilar com avisos habilitados
+        run: make build
+
+      - name: Executar testes da etapa
+        run: make test ETAPA=${{ steps.etapa.outputs.numero }}
