@@ -8,9 +8,10 @@ O repositório sustenta uma revisão prática de C em até 100 minutos. A sequê
 |---|---|---|
 | 01 | `pratica/01-fundamentos` | expressões, tipos, condições e fronteiras |
 | 02 | `pratica/02-vetores-funcoes` | laços, vetores, funções e ausência de dados |
-| 03 | `pratica/03-struct-ponteiros` | `struct`, ponteiros, capacidade e relatório integrado |
+| 03 | `pratica/03-struct-ponteiros` | `struct`, ponteiros, alocação e lista encadeada |
+| 04 | `pratica/04-arquivos` | abertura, escrita, leitura, fechamento e reconstrução da lista |
 
-Os testes são cumulativos: a etapa 2 repete a etapa 1; a etapa 3 repete as duas anteriores. Isso detecta regressões durante a evolução do código.
+Os testes são cumulativos: cada etapa repete todas as anteriores. Isso detecta regressões durante a evolução do código.
 
 ## Preparação antes da aula
 

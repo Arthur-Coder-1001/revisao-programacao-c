@@ -18,7 +18,7 @@ run: build
 
 test: build
 	@if [ -z "$(ETAPA)" ]; then \
-		echo "Informe a etapa: make test ETAPA=01, 02 ou 03"; \
+		echo "Informe a etapa: make test ETAPA=01, 02, 03 ou 04"; \
 		exit 2; \
 	fi
 	@set -e; \
@@ -26,13 +26,14 @@ test: build
 		01) testes="01" ;; \
 		02) testes="01 02" ;; \
 		03) testes="01 02 03" ;; \
+		04) testes="01 02 03 04" ;; \
 		*) echo "Etapa desconhecida: $(ETAPA)"; exit 2 ;; \
 	esac; \
 	for numero in $$testes; do \
 		$(CC) $(CFLAGS) tests/test_$$numero.c src/monitor.c $(LDLIBS) -o $(BUILD_DIR)/test_$$numero; \
 		./$(BUILD_DIR)/test_$$numero; \
 	done
-	@if [ "$(ETAPA)" = "03" ]; then \
+	@if [ "$(ETAPA)" = "03" ] || [ "$(ETAPA)" = "04" ]; then \
 		./$(BUILD_DIR)/monitor > $(BUILD_DIR)/saida.txt; \
 		grep -Fx "Sensor: TMP-01" $(BUILD_DIR)/saida.txt; \
 		grep -Fx "Leituras aceitas: 4" $(BUILD_DIR)/saida.txt; \

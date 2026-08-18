@@ -12,12 +12,18 @@ int main(void) {
     VERIFICAR(leitura_valida(125.0), "125 deve pertencer a faixa valida");
     VERIFICAR(!leitura_valida(125.1), "valor acima de 125 deve ser invalido");
 
-    VERIFICAR(strcmp(classificar_leitura(126.0), "INVALIDA") == 0,
+    VERIFICAR(classificar_leitura(126.0) == LEITURA_INVALIDA,
               "leitura fora da faixa deve ser INVALIDA");
-    VERIFICAR(strcmp(classificar_leitura(79.9), "NORMAL") == 0,
+    VERIFICAR(classificar_leitura(79.9) == LEITURA_NORMAL,
               "leitura abaixo de 80 deve ser NORMAL");
-    VERIFICAR(strcmp(classificar_leitura(80.0), "ALERTA") == 0,
+    VERIFICAR(classificar_leitura(80.0) == LEITURA_ALERTA,
               "leitura a partir de 80 deve ser ALERTA");
+    VERIFICAR(strcmp(estado_como_texto(LEITURA_INVALIDA), "INVALIDA") == 0,
+              "enum INVALIDA deve ser convertido em texto");
+    VERIFICAR(strcmp(estado_como_texto(LEITURA_NORMAL), "NORMAL") == 0,
+              "enum NORMAL deve ser convertido em texto");
+    VERIFICAR(strcmp(estado_como_texto(LEITURA_ALERTA), "ALERTA") == 0,
+              "enum ALERTA deve ser convertido em texto");
 
     return finalizar_testes("01");
 }

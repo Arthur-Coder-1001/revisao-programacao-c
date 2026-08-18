@@ -15,6 +15,7 @@ on:
           - "01"
           - "02"
           - "03"
+          - "04"
 
 permissions:
   contents: read
@@ -50,6 +51,7 @@ jobs:
             pratica/01-fundamentos) echo "numero=01" >> "${GITHUB_OUTPUT}" ;;
             pratica/02-vetores-funcoes) echo "numero=02" >> "${GITHUB_OUTPUT}" ;;
             pratica/03-struct-ponteiros) echo "numero=03" >> "${GITHUB_OUTPUT}" ;;
+            pratica/04-arquivos) echo "numero=04" >> "${GITHUB_OUTPUT}" ;;
             *)
               echo "::error title=Nome de branch inválido::Use uma das branches indicadas no README."
               exit 1

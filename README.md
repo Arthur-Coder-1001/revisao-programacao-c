@@ -25,6 +25,7 @@ Repositório-base das atividades cumulativas de algoritmos e programação proce
 | 1. Tipos, expressões e decisões | `pratica/01-fundamentos` | `make test ETAPA=01` |
 | 2. Vetores e funções | `pratica/02-vetores-funcoes` | `make test ETAPA=02` |
 | 3. `struct` e ponteiros | `pratica/03-struct-ponteiros` | `make test ETAPA=03` |
+| 4. Listas e arquivos | `pratica/04-arquivos` | `make test ETAPA=04` |
 
 As especificações, os checkpoints e as saídas esperadas estão no material da disciplina. Não altere `.github/`, `tests/`, `include/monitor.h` nem o `Makefile` para contornar uma validação.
 
@@ -49,6 +50,7 @@ O código inicial compila, mas as funções contêm pontos de implementação. O
 ├── src/monitor.c
 ├── tests/
 ├── CONTRIBUTING.md
+├── EVOLUCAO_POO.md
 └── GUIA_DOCENTE.md
 ```
 
@@ -56,6 +58,7 @@ O código inicial compila, mas as funções contêm pontos de implementação. O
 - `src/monitor.c` concentra os pontos de implementação;
 - `tests/` contém a validação automática visível;
 - `CONTRIBUTING.md` detalha o fluxo de branches e diagnóstico;
+- `EVOLUCAO_POO.md` preserva o mapa de refatoração do mesmo código para C++;
 - `GUIA_DOCENTE.md` documenta preparação, limites e uso formativo.
 
 ## Licença

@@ -1,6 +1,7 @@
 #include "monitor.h"
 
 #include <stdio.h>
+#include <stdlib.h>
 
 double celsius_para_fahrenheit(double temperatura) {
     /* ETAPA 01: implemente a conversão. */
@@ -13,9 +14,15 @@ bool leitura_valida(double valor) {
     return false;
 }
 
-const char *classificar_leitura(double valor) {
-    /* ETAPA 01: retorne "INVALIDA", "ALERTA" ou "NORMAL". */
+EstadoLeitura classificar_leitura(double valor) {
+    /* ETAPA 01: classifique com if/else. */
     (void)valor;
+    return LEITURA_INVALIDA;
+}
+
+const char *estado_como_texto(EstadoLeitura estado) {
+    /* ETAPA 01: converta o enum em texto usando switch. */
+    (void)estado;
     return "NAO_IMPLEMENTADO";
 }
 
@@ -38,4 +45,45 @@ void exibir_relatorio(const Sensor *sensor) {
     if (sensor != NULL) {
         printf("Sensor: %s\n", sensor->tag);
     }
+}
+
+bool lista_adicionar(NoLeitura **inicio, double valor) {
+    /* ETAPA 03: aloque um nó e encadeie-o ao final da lista. */
+    (void)inicio;
+    (void)valor;
+    return false;
+}
+
+size_t lista_quantidade(const NoLeitura *inicio) {
+    /* ETAPA 03: percorra a lista com while. */
+    (void)inicio;
+    return 0;
+}
+
+double lista_media(const NoLeitura *inicio, bool *possui_dados) {
+    /* ETAPA 03: calcule a média sem acessar um ponteiro nulo. */
+    (void)inicio;
+    if (possui_dados != NULL) {
+        *possui_dados = false;
+    }
+    return 0.0;
+}
+
+void lista_liberar(NoLeitura **inicio) {
+    /* ETAPA 03: libere todos os nós e deixe *inicio igual a NULL. */
+    (void)inicio;
+}
+
+bool salvar_leituras(const char *caminho, const NoLeitura *inicio) {
+    /* ETAPA 04: grave uma leitura por linha e feche o arquivo. */
+    (void)caminho;
+    (void)inicio;
+    return false;
+}
+
+bool carregar_leituras(const char *caminho, NoLeitura **inicio) {
+    /* ETAPA 04: leia as linhas, reconstrua a lista e feche o arquivo. */
+    (void)caminho;
+    (void)inicio;
+    return false;
 }
