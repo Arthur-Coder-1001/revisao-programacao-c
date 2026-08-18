@@ -3,6 +3,7 @@ name: Validação da prática
 on:
   push:
     branches:
+      - main
       - "pratica/**"
   workflow_dispatch:
     inputs:
@@ -45,6 +46,7 @@ jobs:
           fi
 
           case "${GITHUB_REF_NAME}" in
+            main) echo "numero=estrutura" >> "${GITHUB_OUTPUT}" ;;
             pratica/01-fundamentos) echo "numero=01" >> "${GITHUB_OUTPUT}" ;;
             pratica/02-vetores-funcoes) echo "numero=02" >> "${GITHUB_OUTPUT}" ;;
             pratica/03-struct-ponteiros) echo "numero=03" >> "${GITHUB_OUTPUT}" ;;
@@ -58,4 +60,5 @@ jobs:
         run: make build
 
       - name: Executar testes da etapa
+        if: steps.etapa.outputs.numero != 'estrutura'
         run: make test ETAPA=${{ steps.etapa.outputs.numero }}
